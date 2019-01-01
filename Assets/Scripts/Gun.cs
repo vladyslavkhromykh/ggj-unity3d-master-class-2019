@@ -2,9 +2,9 @@
 
 public class Gun : MonoBehaviour
 {
-    private GameObject bulletPrefab;
     [Range(5.0f, 100.0f)]
     public float ShootForce;
+    private GameObject bulletPrefab;
 
     private void Awake()
     {

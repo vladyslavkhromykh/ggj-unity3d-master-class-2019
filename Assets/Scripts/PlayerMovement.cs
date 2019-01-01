@@ -6,7 +6,6 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public Transform Camera;
-
     [Range(1.0f, 10.0f)]
     public float ForwardMovementSpeed;
     [Range(1.0f, 20.0f)]
