@@ -8,7 +8,7 @@ public class Gun : MonoBehaviour
 
     private void Awake()
     {
-        bulletPrefab = Resources.Load<GameObject>("Bullets/default-bullet");
+        bulletPrefab = Resources.Load<GameObject>("Bullets/bullet");
     }
 
     private void Update()
