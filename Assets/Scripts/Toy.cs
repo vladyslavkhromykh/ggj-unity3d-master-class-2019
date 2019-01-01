@@ -14,7 +14,7 @@ public class Toy : MonoBehaviour
             isGrounded = true;
         }
 
-        if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Bullet") && !isGrounded)
+        if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Bullet"))
         {
             EventsManager.OnBulletHitToy(this);
             Destroy(gameObject);
