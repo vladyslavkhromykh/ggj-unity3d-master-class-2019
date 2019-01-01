@@ -8,7 +8,7 @@ public static class FXManager
 
     public static void Initialize()
     {
-        toyHitFXPrefab = Resources.Load<GameObject>("FX/ToyHitFX");
+        toyHitFXPrefab = Resources.Load<GameObject>("FX/toyHitFX");
         EventsManager.BulletHitToy += OnBulletHitToy;
     }
 
