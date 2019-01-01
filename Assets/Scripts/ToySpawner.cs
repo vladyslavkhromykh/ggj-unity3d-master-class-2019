@@ -27,6 +27,6 @@ public class ToySpawner : MonoBehaviour
     private void Spawn()
     {
         GameObject toy = Instantiate<GameObject>(toyPrefabs[Random.Range(0, toyPrefabs.Length)], SpawnPlace.position, Random.rotation);
-        toy.GetComponent<Rigidbody>().AddForce(Vector3.up * Random.Range(10.0f, 40.0f), ForceMode.Impulse);
+        toy.GetComponent<Rigidbody>().AddForce(SpawnerDirection.forward * Random.Range(10.0f, 40.0f), ForceMode.Impulse);
     }
 }
