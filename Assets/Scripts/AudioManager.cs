@@ -5,16 +5,16 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     private AudioSource source;
-    private AudioClip shoot;
-    private AudioClip hit;
 
     private void Awake()
     {
         source = GetComponent<AudioSource>();
-        shoot = Resources.Load<AudioClip>("Audio/cannon-shot");
-        hit = Resources.Load<AudioClip>("Audio/cannon-hit");
+        var shoot = Resources.Load<AudioClip>("Audio/player-shot");
+        var hit = Resources.Load<AudioClip>("Audio/bullet-hit");
+        var cannon = Resources.Load<AudioClip>("Audio/cannon-shot");
 
+        EventsManager.ToySpawn += delegate { source.PlayOneShot(cannon, 0.05f); };
         EventsManager.PlayerShot += delegate { source.PlayOneShot(shoot); };
-        EventsManager.BulletHitToy += delegate { source.PlayOneShot(hit); };
+        EventsManager.BulletHitToy += delegate { source.PlayOneShot(hit, 0.5f); };
     }
 }
