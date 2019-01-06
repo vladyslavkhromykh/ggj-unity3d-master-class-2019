@@ -2,7 +2,7 @@
 
 public class Gun : MonoBehaviour
 {
-    [Range(5.0f, 100.0f)]
+    [Range(5.0f, 200.0f)]
     public float ShootForce;
     private GameObject bulletPrefab;
 
