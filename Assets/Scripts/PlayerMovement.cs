@@ -26,5 +26,10 @@ public class PlayerMovement : MonoBehaviour
         rotation.y = Input.GetAxis("Mouse X");
         Camera.localRotation = Quaternion.Euler(rotation.x * LookSpeed, 0.0f, 0.0f);
         transform.Rotate(0.0f, rotation.y * LookSpeed, 0.0f);
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GetComponent<Rigidbody>().AddForce(Vector3.up * 5.0f, ForceMode.Impulse);
+        }
     }
 }
