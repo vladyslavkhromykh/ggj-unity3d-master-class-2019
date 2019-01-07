@@ -4,11 +4,11 @@ using UnityEngine;
 
 namespace ReadyToUse
 {
-    public class ApplicationManager : MonoBehaviour
+    public class Storage : MonoBehaviour
     {
         private void Awake()
         {
-            FXManager.Initialize();
+            
         }
     }
 }

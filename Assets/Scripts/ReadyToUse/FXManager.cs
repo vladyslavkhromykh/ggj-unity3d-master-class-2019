@@ -4,11 +4,11 @@ using UnityEngine;
 
 namespace ReadyToUse
 {
-    public static class FXManager
+    public class FXManager : MonoBehaviour
     {
         private static GameObject toyHitFXPrefab;
 
-        public static void Initialize()
+        private void Awake()
         {
             toyHitFXPrefab = Resources.Load<GameObject>("FX/toyHitFX");
             EventsManager.BulletHitToy += OnBulletHitToy;
