@@ -8,6 +8,7 @@ namespace ReadyToUse
         public static event Action PlayerShot = delegate { };
         public static event Action<Toy> BulletHitToy = delegate { };
         public static event Action ToySpawn = delegate { };
+        public static event Action<int, int> ScoreUpdated;
 
         public static void OnPlayerShot()
         {
@@ -22,6 +23,11 @@ namespace ReadyToUse
         public static void OnToySpawn()
         {
             ToySpawn();
+        }
+
+        public static void OnScoreUpdated(int score, int bestScore)
+        {
+            ScoreUpdated(score, bestScore);
         }
     }
 

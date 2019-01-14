@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace ReadyToUse
 {
-    public class ScoresManager : MonoBehaviour
+    public class ScoreManager : MonoBehaviour
     {
         public int Score
         {
@@ -17,6 +17,11 @@ namespace ReadyToUse
             EventsManager.BulletHitToy += OnBulletHitToy;
         }
 
+        private void Start()
+        {
+            EventsManager.OnScoreUpdated(Score, PlayerPrefs.GetInt("best-score", 0));
+        }
+
         private void OnBulletHitToy(Toy toy)
         {
             Score++;
@@ -25,9 +30,10 @@ namespace ReadyToUse
             if (Score > bestScore)
             {
                 bestScore = Score;
-                PlayerPrefs.SetInt("total-score", Score);
+                PlayerPrefs.SetInt("best-score", Score);
             }
 
+            EventsManager.OnScoreUpdated(Score, bestScore);
             PlayerPrefs.Save();
         }
     }
