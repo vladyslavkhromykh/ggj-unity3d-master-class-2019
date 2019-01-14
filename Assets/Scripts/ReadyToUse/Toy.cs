@@ -5,7 +5,11 @@ namespace ReadyToUse {
     {
         [Range(20.0f, 100.0f)]
         public float LifeTimeLimit;
-        private bool isGrounded;
+        public bool isGrounded
+        {
+            get;
+            private set;
+        }
         private float lifeTime;
 
         private void OnCollisionEnter(Collision collision)

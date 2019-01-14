@@ -24,7 +24,17 @@ namespace ReadyToUse
 
         private void OnBulletHitToy(Toy toy)
         {
-            Score++;
+            int pointsToAdd = 0;
+            if (toy.isGrounded)
+            {
+                pointsToAdd = 1;
+            }
+            else
+            {
+                pointsToAdd = 5;
+            }
+
+            Score += pointsToAdd;
 
             int bestScore = PlayerPrefs.GetInt("best-score", 0);
             if (Score > bestScore)
