@@ -16,6 +16,11 @@ namespace ReadyToUse
 
         private Vector2 rotation = Vector2.zero;
 
+        private void Awake()
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+
         private void Update()
         {
             float forwardMovement = Input.GetAxis("Vertical");
