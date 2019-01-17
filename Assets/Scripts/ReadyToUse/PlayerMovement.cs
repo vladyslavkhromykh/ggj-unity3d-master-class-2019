@@ -25,13 +25,15 @@ namespace ReadyToUse
         {
             float forwardMovement = Input.GetAxis("Vertical");
             float sideMovement = Input.GetAxis("Horizontal");
-            transform.Translate(sideMovement * SideMovementSpeed * Time.deltaTime, 0.0f, forwardMovement * ForwardMovementSpeed * Time.deltaTime);
+
+
+            GetComponent<Transform>().Translate(sideMovement * SideMovementSpeed * Time.deltaTime, 0.0f, forwardMovement * ForwardMovementSpeed * Time.deltaTime);
 
             rotation.x += -Input.GetAxis("Mouse Y");
             rotation.x = Mathf.Clamp(rotation.x, -15f, 15f);
             rotation.y = Input.GetAxis("Mouse X");
             Camera.localRotation = Quaternion.Euler(rotation.x * LookSpeed, 0.0f, 0.0f);
-            transform.Rotate(0.0f, rotation.y * LookSpeed, 0.0f);
+            GetComponent<Transform>().Rotate(0.0f, rotation.y * LookSpeed, 0.0f);
         }
     }
 

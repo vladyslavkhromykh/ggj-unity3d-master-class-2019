@@ -6,7 +6,7 @@ namespace ReadyToUse
 {
     public class AudioManager : MonoBehaviour
     {
-        private AudioSource source;
+        public AudioSource source;
 
         private void Awake()
         {

@@ -27,7 +27,11 @@ namespace ReadyToUse
 
         public static void OnScoreUpdated(int score, int bestScore)
         {
-            ScoreUpdated(score, bestScore);
+            if (ScoreUpdated != null)
+            {
+                ScoreUpdated(score, bestScore);
+            }
+
         }
     }
 

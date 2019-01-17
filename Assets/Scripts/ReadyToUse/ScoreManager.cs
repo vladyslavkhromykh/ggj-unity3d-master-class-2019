@@ -27,11 +27,10 @@ namespace ReadyToUse
             int pointsToAdd = 0;
             if (toy.isGrounded)
             {
-                pointsToAdd = 1;
-            }
-            else
-            {
                 pointsToAdd = 5;
+            } else
+            {
+                pointsToAdd = 100;
             }
 
             Score += pointsToAdd;
