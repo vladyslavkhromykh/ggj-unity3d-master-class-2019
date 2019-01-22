@@ -1,5 +1,9 @@
 GGJ 2019 Unity3D master-class.
-Contains:
-  Unity project (2018.3)
-  PDF presentation
-  Monobehaviour lifecycle scheme
+Materials:
+
+  1. Unity project (2018.3)
+  
+  2. PDF presentation
+  
+  3. Monobehaviour lifecycle scheme
+  
